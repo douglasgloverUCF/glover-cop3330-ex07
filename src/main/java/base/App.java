@@ -65,12 +65,13 @@ public class App {
     }
     void output(double length, double width, double areaFeet, double areaMeters)
     {
-        String message = String.format("You entered dimensions of %.0f feet by %.0f feet.\n" +
-                                       "The area is\n" +
-                                       "%.0f square feet\n" +
-                                       "%.3f square meters\n" +
-                                       "The formula for this conversion is m2 = f2 × 0.09290304",
-                                       length, width, areaFeet, areaMeters);
+        String message = String.format("""
+        You entered dimensions of %.0f feet by %.0f feet.
+        The area is
+        %.0f square feet
+        %.3f square meters
+        The formula for this conversion is m2 = f2 × 0.09290304""",
+        length, width, areaFeet, areaMeters);
         System.out.print(message);
     }
 }
