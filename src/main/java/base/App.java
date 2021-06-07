@@ -20,6 +20,7 @@ You entered dimensions of 15 feet by 20 feet.
 The area is
 300 square feet
 27.871 square meters
+
 The formula for this conversion is m2 = f2 × 0.09290304
 
 Constraints
@@ -35,6 +36,7 @@ Implement this program as a GUI program that automatically updates the values wh
  */
 public class App {
     Scanner in = new Scanner(System.in);
+    final double convert = 0.09290304;
     public static void main(String[] args) {
         App myApp = new App();
         double length = myApp.getLength();
@@ -61,7 +63,7 @@ public class App {
     }
     double areaMeters(double areaFeet)
     {
-        return areaFeet * 0.09290304;
+        return areaFeet * convert;
     }
     void output(double length, double width, double areaFeet, double areaMeters)
     {
@@ -69,8 +71,7 @@ public class App {
         You entered dimensions of %.0f feet by %.0f feet.
         The area is
         %.0f square feet
-        %.3f square meters
-        The formula for this conversion is m2 = f2 × 0.09290304""",
+        %.3f square meters""",
         length, width, areaFeet, areaMeters);
         System.out.print(message);
     }
